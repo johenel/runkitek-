@@ -67,6 +67,15 @@
 			                   		<option>PICK UP</option>
 			                   		<option selected>DELIVERY</option>
 			                   	</select>
+			                   	<div class="optional-pickup-location" style="margin-top: 10px;display: none;">
+			                   		<label for="inputPickupLoc" class="rs-element rs-form-label">Pick Up Location <span class="required">*</span></label>
+			                   		<select id="pickupLocSelect" class="form-control" name="pickup_location">
+			                   			<option>GARMIN STORE - SM NORTH EDSA</option>
+			                   			<option>GARMIN STORE - SM MEGAMALL</option>
+			                   			<option>GARMIN STORE - SM MALL OF ASIA</option>
+			                   			<option>United Architect of the Philippines National Headquarters (#53 Scout Rallos st. Barangay Laging Handa Quezon City)</option>
+			                   		</select>
+			                   	</div>
 			                </div>
 			                <div class="offset-lg-2 col-lg-8">
 			                    <div class="row">

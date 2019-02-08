@@ -16,8 +16,8 @@ class TransactionsController extends Controller
 		$t = Transactions::where('users_id', $request->session()->get('user')->id)->get();
 
 		if(count($t) > 0) {
-			$status = $this->checkStatus($t[0], $request->root());
-			dd($status);
+			// $status = $this->checkStatus($t[0], $request->root());
+			// dd($status);
 			$response['success'] = true;
 			$response['transaction'] = $t[0];
 		} else {
@@ -106,7 +106,28 @@ class TransactionsController extends Controller
 
     public function new(Request $request)
     {
-    	$draft = $request->session()->get('transaction_draft');
+    	$draft = (object)[];
+    	$draft->category = $request->category;
+    	$draft->delivery_type = $request->delivery_type;
+    	$draft->size = $request->shirt_size;
+    	$draft->amount = $request->amount;
+    	$draft->pickup_location = $request->pickup_location;
+
+    	if($request->delivery_type == 'PICK UP') {
+    		$request->validate([
+    			'category' => 'required',
+    			'pickup_location' => 'required',
+    			'amount' => 'required',
+    			'shirt_size' => 'required'
+    		]);
+    	} else {
+    		$request->validate([
+    			'category' => 'required',
+    			'delivery_type' => 'required',
+    			'amount' => 'required',
+    			'shirt_size' => 'required'
+    		]);
+    	}
 
     	$transaction = new Transactions;
     	$transaction->users_id = $request->session()->get('user')->id;
@@ -114,6 +135,7 @@ class TransactionsController extends Controller
     	$transaction->delivery_type = $request->delivery_type;
     	$transaction->size = $request->shirt_size;
     	$transaction->amount = $request->amount;
+    	$transaction->pickup_location = $request->pickup_location;
     	$transaction->save();
 
     	$base = $request->root();
