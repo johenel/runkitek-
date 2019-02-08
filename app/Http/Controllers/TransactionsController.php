@@ -15,56 +15,74 @@ class TransactionsController extends Controller
 		$response = [];
 		$t = Transactions::where('users_id', $request->session()->get('user')->id)->get();
 
-
-		
 		if(count($t) > 0) {
-			$t_status = $this->search($t[0]->reference_no);
-
-			if($t_status->status == 404) {
-				$response['error'] = true;
-				$response['success'] = true;
-				$response['transaction'] = $t[0];
-			} else {
-				$response['success'] = true;
-				$response['transaction'] = $t[0];
-			}
+			$status = $this->checkStatus($t[0], $request->root());
+			dd($status);
+			$response['success'] = true;
+			$response['transaction'] = $t[0];
 		} else {
 			$response['success'] = false;
 		}
 		return view('transaction-list', $response);
 	}
 
-	private function search($refno)
+	private function checkStatus($transaction, $root) 
 	{
-		$response = null;
-
 		$curl = curl_init();
 
-		$request_url = 'https://institution.multipay.ph/api/v1/transactions/';
+		$params = [
+			'txnid' => $transaction->id,
+			'refno' => $transaction->reference_no,
+			'payment_channel' => $transaction->payment_channel,
+			'status' => $transaction->status,
+			'message' => $transaction->message
+		];
+
+		$multipay_code = env('MULTIPAY_CODE');
+		$multipay_token = env('MULTIPAY_TOKEN');
+
+    	$multipay_base_url = env('MULTIPAY_BASE_URL');
+
+    	$search = $multipay_base_url . '/transactions/' . $transaction->reference_no;
 
 		curl_setopt_array($curl, array(
-		    CURLOPT_URL => $request_url,
+		    CURLOPT_URL => $search,
 		    CURLOPT_RETURNTRANSFER => true,
 		    CURLOPT_ENCODING => "UTF-8",
 		    CURLOPT_MAXREDIRS => 10,
 		    CURLOPT_TIMEOUT => 30000,
 		    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-		    CURLOPT_CUSTOMREQUEST => "GET",
+		    CURLOPT_CUSTOMREQUEST => "POST",
+		    CURLOPT_POSTFIELDS => json_encode($params),
 		    CURLOPT_HTTPHEADER => array(
-		        'X-MultiPay-Token:dcd375796d4a8049dba1846d0c43e986ec13dc5e',
-			    'X-MultiPay-Code:PAR_DEV',
+		        'X-MultiPay-Token:'.$multipay_token,
+			    'X-MultiPay-Code:'.$multipay_code,
 		        'Content-Type:application/json',
 		    ),
 		));
 
-		$result = json_decode(curl_exec($curl));
+		$response = json_decode(curl_exec($curl));
 
-		return $result;
+		return $response;
 	}
 
 	public function callback(Request $request)
 	{
-		dd($request->all());
+		$txnid = $request->txnid;
+		$refno = $request->refno;
+		$status = $request->status;
+		$payment_channel = $request->payment_channel;
+		$message = $request->message;
+
+		Transactions::where('id', $txnid)->update([
+			'reference_no' => $refno,
+			'status' => $status,
+			'payment_channel' => $payment_channel,
+			'message' => $message
+		]);
+
+
+
 		return 'good';
 	} 
 
@@ -107,14 +125,18 @@ class TransactionsController extends Controller
     		'email' => $request->session()->get('user')->email,
 		    'txnid' =>  $transaction->id,
 		    'amount' => floatval($transaction->amount),
-		    'description[url]' => $cb_url,
-		    'callback_url' => $url,
+		    'description[url]' => $url,
+		    'callback_url' => $cb_url,
 		];
 
 		$curl = curl_init();
 
+		$multipay_base_url = env('MULTIPAY_BASE_URL');
+		$multipay_code = env('MULTIPAY_CODE');
+		$multipay_token = env('MULTIPAY_TOKEN');
+
 		curl_setopt_array($curl, array(
-		    CURLOPT_URL => "https://institution.multipay.ph/api/v1/transactions/generate",
+		    CURLOPT_URL => $multipay_base_url . '/transactions/generate',
 		    CURLOPT_RETURNTRANSFER => true,
 		    CURLOPT_ENCODING => "UTF-8",
 		    CURLOPT_MAXREDIRS => 10,
@@ -123,19 +145,15 @@ class TransactionsController extends Controller
 		    CURLOPT_CUSTOMREQUEST => "POST",
 		    CURLOPT_POSTFIELDS => json_encode($data1),
 		    CURLOPT_HTTPHEADER => array(
-		        'X-MultiPay-Token:dcd375796d4a8049dba1846d0c43e986ec13dc5e',
-			    'X-MultiPay-Code:PAR_DEV',
+		        'X-MultiPay-Token:'.$multipay_token,
+			    'X-MultiPay-Code:'.$multipay_code,
 		        'Content-Type:application/json',
 		    ),
 		));
 
 		$response = json_decode(curl_exec($curl));
 
-		$uri_parts = explode('/', $response->data->url);
-    	$refno = end($uri_parts);
-
 		Transactions::where('id', $transaction->id)->update([
-			'reference_no' => $refno,
 			'digest' => $response->data->url
 		]);
 
@@ -144,6 +162,8 @@ class TransactionsController extends Controller
 
     public function expired(Request $request)
     {
-    	return view('transaction-expired');
+    	$response = [];
+    	$response['pgi'] = $request->session()->get('pgi');
+    	return view('transaction-expired', $response);
     }
 }

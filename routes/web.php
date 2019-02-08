@@ -22,6 +22,7 @@ Route::get('/signin', 'LoginController@index');
 Route::post('/signin', 'LoginController@login');
 Route::get('/logout', 'LoginController@logout');
 
+Route::post('/transactions/callback', 'TransactionsController@callback');
 
 //LOGGED IN USER ROUTES
 Route::middleware(['auth'])->group(function() {
@@ -37,7 +38,7 @@ Route::middleware(['auth'])->group(function() {
 		Route::get('/transactions/new', 'TransactionsController@newIndex');
 		Route::post('/transactions/new', 'TransactionsController@new');
 		Route::get('/transaction/expired', 'TransactionsController@expired');
-		Route::post('/transactions/callback', 'TransactionsController@callback');
+		
 	});
 });
 
