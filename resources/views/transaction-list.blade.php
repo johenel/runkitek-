@@ -40,7 +40,12 @@
 	                                </tr>
 	                                <tr>
 	                                    <td>Amount</td>
-	                                    <td><b>{{$transaction->amount}}</b></td>
+	                                    @if($transaction->delivery_type == 'DELIVERY')
+	                                    	<td><b>{{$transaction->amount}}</b> (150 Delivery Fee)</td>
+	                                    @else
+	                                    	<td><b>{{$transaction->amount}}</b></td>
+	                                    @endif
+	                                    
 	                                </tr>
 	                                <tr>
 	                                    <td>Date</td>
@@ -52,7 +57,12 @@
 	                                    	@if($transaction->status == null)
 	                                    	<b>Initiated <span style="font-weight: normal;font-size: 14px;"><a href="{{$transaction->digest}}" style="color:orange;">(Confirm transaction here)</a></span></b>
 	                                    	@else
-	                                    	<b style="color:green">{{$transaction->status}}</b>
+	                                    		@if($transaction->status == 'P') 
+	                                    			<b style="color:orange">PENDING</b>
+	                                    		@else
+	                                    			<b style="color:green">PAID</b>
+	                                    		@endif
+	                                    	
 	                                    	@endif
 	                                    </td>
 	                                </tr>
