@@ -87,66 +87,68 @@
 	    <div class="container">
 	    	<div class="row">
 	    		<div class="col-md-12 text-center">
-	    			<h4 style="color:green;">Inclusive of Singlet, Race Bib with Timing Chip, Finisher’s Medal</h4>
-		    		<p>
-						<i>Top 3 Finishers All Category (Men / Women) will receive cash prize and trophy</i>
-					</p>
-					<div style="width: max-content;text-align: left;margin: auto;">
-						<b>Registration Venues:</b>
-						<ul>
-							<li>Online - <a href="http://www.runkitek.com/register">http://www.runkitek.com/register</a></li>
-							<li>
-								In Store Registration – Garmin Stores:
+	    			<div class="row">
+	    				<div class="col-md-12">
+    						<h4 style="color:green;">Inclusive of Singlet, Race Bib with Timing Chip, Finisher’s Medal</h4>
+    						<p>
+								<i>Top 3 Finishers All Category (Men / Women) will receive cash prize and trophy</i>
+							</p>
+	    				</div>
+	    				<div class="col-md-6">
+	    					<div class="contact-info left">
+	    						<b>Registration Venues:</b>
 								<ul>
-									<li>SM NORTH EDSA</li>
-									<li>SM MEGAMALL</li>
-									<li>SM MALL OF ASIA</li>
+									<li>Online - <a href="http://www.runkitek.com/register">http://www.runkitek.com/register</a></li>
+									<li>
+										In Store Registration – Garmin Stores:
+										<ul>
+											<li>SM NORTH EDSA</li>
+											<li>SM MEGAMALL</li>
+											<li>SM MALL OF ASIA</li>
+										</ul>
+									</li>
 								</ul>
-							</li>
-						</ul>
-						<b>For more information:</b>
-						<div>
-							<div>Visit - <a href="https://www.facebook.com/events/308844763306886/">https://www.facebook.com/events/308844763306886/</a></div>
-							<div>Contact # - 09157688735</div>
-						</div>
-					</div>
+							</div>
+	    				</div>
+	    				<div class="col-md-6">
+	    					<div class="contact-info right">
+		    					<b>For more information:</b>
+								<div>
+									<div>Visit - <a href="https://www.facebook.com/events/308844763306886/">https://www.facebook.com/events/308844763306886/</a></div>
+									<div>Contact # - 09157688735</div>
+								</div>
+							</div>
+	    				</div>
+	    			</div>
 	    		</div>
 	    	</div>
 	    </div>
-	    <div class="content mt-5 container">
-	    	<div class="event-box row">
-	    		<div class="text-center mb-5 mx-auto col-sm-12 col-md-4">
-	    			<p class="mb-2">Co-presented by:</p>
-	    			<a href="#">
-	    				<img src="/media/davies.jpg" class="logo-sponsors img-fluid" alt="Davies">
-	    			</a>
-	    		</div>
-	    	</div>
-	    	<div class="event-box row">
-	    		<div class="text-center col-sm-12 offset-md-2 col-md-4">
-	    			<p class="mb-2">Powered by:</p>
-	    			<a href="https://multisyscorp.com">
-	    				<img src="/media/logo-multisys.8037cfa3.png" class="logo-sponsors img-fluid" alt="MultiSys Technologies Corporation">
-	    			</a>
-	    		</div>
-	    		<div class="text-center col-sm-12 col-md-4">
-	    			<p class="mb-2">Event Specialist:</p>
-	    			<a href="http://par.com.ph/">
-	    				<img src="/media/logo-par.773d7a73.png" class="logo-sponsors img-fluid" alt="Pinoy Aspiring Runners">
-	    			</a>
-	    		</div>
-	    	</div>
-	    </div>
-	    <div class="container">
-	    	<div class="row text-center" style="padding-top:20px;">
-	    		<div class="col-md-4">
-	    			<img src="/media/uap.png" width="150" height="150">
+	    <div class="container text-center credits-logos-top" style="padding-top:20px;">
+	    	<div class="row">
+	    		<div class="col-md-4" style="padding-top:30px;">
+	    			<img src="/media/davies.jpg" class="credit-logos" alt="Davies">
 	    		</div>
 	    		<div class="col-md-4">
-	    			<img src="/media/as.png" height="100" width="400" style="margin-top:25px;">
-	    		</div>
-	    		<div class="col-md-4">
+	    			<img src="/media/uap.png" class="credit-logos" style="height: 200px;">
 	    			
+	    		</div>
+	    		<div class="col-md-4" style="padding-top:30px;">
+	    			<img src="/media/as.png" class="credit-logos" style="height: 80px;">
+	    			
+	    		</div>
+	    	</div>
+	    </div>
+	    <div class="container credits-logos-bottom">
+	    	<div class="row text-center" style="padding-top:30px;">
+	    		<div class="col-md-6">
+	    			<a href="http://par.com.ph/">
+	    				<img src="/media/logo-par.773d7a73.png" alt="Pinoy Aspiring Runners">
+	    			</a>
+	    		</div>
+	    		<div class="col-md-6">
+	    			<a href="https://multisyscorp.com">
+	    				<img src="/media/logo-multisys.8037cfa3.png"  class="credit-logos" alt="MultiSys Technologies Corporation" style="height: 80px;">
+	    			</a>
 	    		</div>
 	    	</div>
 	    </div>

@@ -131,10 +131,10 @@
                         </div>
                         <div class="form-group form-row">
                             <div class="col-lg-12">
-                                <label for="inputSchoolName" class="rs-element rs-form-label">Group Name<span class="required">*</span></label>
+                                <label for="inputSchoolName" class="rs-element rs-form-label">Affiliation / Company Name<span class="required">*</span></label>
                                 <div class="rs-element rs-input -full">
                                     <div class="rs-input-wrap">
-                                        <input name="group_name" placeholder="School Name" id="inputSchoolName" type="text" class="rs-element form-control" value="" required></div>
+                                        <input name="group_name" placeholder="" id="inputSchoolName" type="text" class="rs-element form-control" value="" required></div>
                                 </div>
                             </div>
                            <!--  <div class="col-lg-4">
@@ -211,7 +211,7 @@
                                 <input id="inputContact" name="emergency_number" class="form-control -full form-control"  value="" type="number" required>
                             </div>
                         </div>
-                        <div class="mt-3 form-group form-row">
+                        <div class="mt-3 form-group form-row" style="display:none;">
                             <div class="col-lg-12">
                                 <h5 class="font-weight-bold">.Please download all forms below:</h5>
                                 <a class="btn mb-2 mb-md-auto mr-md-2 btn-small btn-success" role="button" href="/downloadables/TakBro-2019-PARENTAL-CONSENT-FORM-Fillable-Form.9c88bef8.pdf" download="TakBro-2019-PARENTAL-CONSENT-FORM-Fillable-Form" style="vertical-align: top;background: #333;">Parental Consent Form</a>

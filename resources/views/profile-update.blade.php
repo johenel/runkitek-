@@ -147,10 +147,10 @@
 		                        </div>
 		                        <div class="form-group form-row">
 		                            <div class="col-lg-8">
-		                                <label for="inputSchoolName" class="rs-element rs-form-label">Company / School / Team Name <span class="required">*</span></label>
+		                                <label for="inputSchoolName" class="rs-element rs-form-label">Affiliation / Company Name<span class="required">*</span></label>
 		                                <div class="rs-element rs-input -full">
 		                                    <div class="rs-input-wrap">
-		                                        <input name="group_name" placeholder="School Name" id="inputSchoolName" type="text" class="rs-element form-control" value="{{session()->get('user')->details->group_tag}}">
+		                                        <input name="group_name" placeholder="" id="inputSchoolName" type="text" class="rs-element form-control" value="{{session()->get('user')->details->group_tag}}">
 		                                    </div>
 		                                </div>
 		                            </div>

@@ -23,12 +23,16 @@
 	                        <table class="table table-bordered table-condensed p-0 m-0">
 	                            <tbody>
 	                                <tr>
-	                                    <td rowspan="7" class="text-center" style="width: 200px;">
+	                                    <td rowspan="10" class="text-center" style="width: 200px;">
 	                                        <p class="badge">Reference Number</p><img alt="jsx-a11y/alt-text" class="image-responsive" src="https://chart.googleapis.com/chart?cht=qr&amp;chl={{$transaction->reference_no}}&amp;chs=180x180&amp;choe=UTF-8&amp;chld=L|2">{{$transaction->reference_no}}</td>
 	                                    <td style="width: 200px;">Name</td>
 	                                    <td><b>
 	                                    	{{session()->get('user')->first_name}} {{session()->get('user')->last_name}}
 	                                    </b></td>
+	                                </tr>
+	                                 <tr>
+	                                    <td>Email</td>
+	                                    <td><b>{{session()->get('user')->email}}</b></td>
 	                                </tr>
 	                                <tr>
 	                                    <td>Category</td>
@@ -46,6 +50,18 @@
 	                                    	<td><b>{{$transaction->amount}}</b></td>
 	                                    @endif
 	                                    
+	                                </tr>
+	                                <tr>
+	                                    <td>Contact #</td>
+	                                    <td><b>{{session()->get('user')->details->contact_number}}</b> </td>
+	                                </tr>
+	                                <tr>
+	                                    <td>Delivery Address</td>
+	                                    @if($transaction->delivery_type == 'DELIVERY')
+	                                    <td><b>{{session()->get('user')->details->delivery_address}}</b></td>
+	                                    @else
+	                                    <td><b>{{$transaction->pickup_location}}</b></td>
+	                                    @endif
 	                                </tr>
 	                                <tr>
 	                                    <td>Date</td>
