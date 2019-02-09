@@ -1,6 +1,10 @@
 body {
   background: white;
 }
+.credit-logos {
+  height: 125px;
+  width: 240px;
+}
 .alert.alert-danger ul {
   margin: 0px;
 }
@@ -95,6 +99,17 @@ footer {
   margin: 0;
   line-height: 1.5;
   font-size: 12px;
+}
+.home .contact-info {
+  width: 100%;
+  word-break: break-all;
+  text-align: left;
+}
+.home .contact-info.left {
+  float: right;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 .event-hero {
   position: relative;
@@ -536,6 +551,10 @@ footer {
   }
 }
 @media (max-width: 768px) {
+  .credit-logos {
+    height: 100px;
+    width: 200px;
+  }
   .event-details-small .content .event-box .event-cover {
     padding-left: 35px;
     max-width: 17.33333%;
@@ -571,6 +590,16 @@ footer {
   }
 }
 @media (max-width: 425px) {
+  img.as-img {
+    width: 200px;
+    height: 70px;
+  }
+  .home .contact-info.left {
+    float: left;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: 100%;
+  }
   #eventsPage .event-category .category {
     font-size: 40px;
   }
@@ -619,6 +648,9 @@ footer {
     max-width: 100%;
     padding: 0px 40px;
     width: 100%;
+  }
+  .credit-logos {
+    padding: 10px;
   }
 }
 @media (max-width: 375px) {

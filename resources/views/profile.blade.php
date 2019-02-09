@@ -29,9 +29,9 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12">
-                                	<a class="btn mb-2 btn-block btn-small btn-primary" role="button" href="/static/media/TakBro-2019-PARENTAL-CONSENT-FORM-Fillable-Form.9c88bef8.pdf" download="TakBro-2019-PARENTAL-CONSENT-FORM-Fillable-Form" style="background: #333;">Parental Consent Form</a>
-                                	<a class="btn mb-2 btn-block btn-small btn-primary" role="button" href="/static/media/TakBro-2019-RACE-AGREEMENT-FORM-Fillable-Form.68033b05.pdf" download="TakBro-2019-RACE-AGREEMENT-FORM-Fillable-Form" style="background: #333;">Race Agreement Form</a>
-                                	<a class="btn mb-2 btn-block btn-small btn-primary" role="button" href="/static/media/TakBro-2019-WAIVERS-Fillable-Form.f3851535.pdf" download="TakBro-2019-WAIVERS-Fillable-Form" style="background: #333;">Waiver Form</a>
+                                	<!-- <a class="btn mb-2 btn-block btn-small btn-primary" role="button" href="/static/media/TakBro-2019-PARENTAL-CONSENT-FORM-Fillable-Form.9c88bef8.pdf" download="TakBro-2019-PARENTAL-CONSENT-FORM-Fillable-Form" style="background: #333;">Parental Consent Form</a>
+                                	<a class="btn mb-2 btn-block btn-small btn-primary" role="button" href="/static/media/TakBro-2019-RACE-AGREEMENT-FORM-Fillable-Form.68033b05.pdf" download="TakBro-2019-RACE-AGREEMENT-FORM-Fillable-Form" style="background: #333;">Race Agreement Form</a> -->
+                                	<a class="btn mb-2 btn-block btn-small btn-primary" role="button" href="/downloadables/ACCIDENT-WAIVER-AND-RELEASE-OF-LIABILITY-FORM.pdf" download="ACCIDENT-WAIVER-AND-RELEASE-OF-LIABILITY-FORM" style="background: #333;">Runners Waiver</a>
                                 	</div>
                             </div>
                         </div>
