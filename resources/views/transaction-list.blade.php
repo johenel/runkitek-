@@ -56,10 +56,12 @@
 	                                    <td><b>{{session()->get('user')->details->contact_number}}</b> </td>
 	                                </tr>
 	                                <tr>
-	                                    <td>Delivery Address</td>
+	                                    
 	                                    @if($transaction->delivery_type == 'DELIVERY')
+	                                    <td>Delivery Address</td>
 	                                    <td><b>{{session()->get('user')->details->delivery_address}}</b></td>
 	                                    @else
+	                                    <td>Pick Up Address</td>
 	                                    <td><b>{{$transaction->pickup_location}}</b></td>
 	                                    @endif
 	                                </tr>
