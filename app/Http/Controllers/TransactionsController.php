@@ -7,6 +7,7 @@ use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Client;
 use Carbon\Carbon;
 use App\Models\Transactions;
+use Validator;
 
 class TransactionsController extends Controller
 {
@@ -129,12 +130,34 @@ class TransactionsController extends Controller
     		]);
     	}
 
+    	$validator = Validator::make($request->all(), [
+            'category' => 'required',
+        ]);
+
+        $userTransactions = Transactions::where('users_id', $request->session()->get('user')->id)->get();
+
+        if(count($userTransactions) > 0) {
+        	$validator->after(function($validator) {
+                $validator->errors()->add('error', 'A TRANSACTION already exist');
+            });
+            if($validator->fails()) {
+                $errors = $validator->errors();
+                return redirect('/events')->withErrors($validator);
+            }
+        }
+
+        $amount = $request->amount;
+
+        if($request->delivery_type == 'DELIVERY') {
+        	$amount = $request->amount + 150;
+        }
+
     	$transaction = new Transactions;
     	$transaction->users_id = $request->session()->get('user')->id;
     	$transaction->category = $request->category;
     	$transaction->delivery_type = $request->delivery_type;
     	$transaction->size = $request->shirt_size;
-    	$transaction->amount = $request->amount;
+    	$transaction->amount = $amount;
     	$transaction->pickup_location = $request->pickup_location;
     	$transaction->save();
 

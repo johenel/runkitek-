@@ -1,6 +1,9 @@
 body {
   background: white;
 }
+.alert.alert-danger ul {
+  margin: 0px;
+}
 .bg-gradient {
   background: linear-gradient(45deg, #000000, #100000c7);
   padding-top: 0px;
