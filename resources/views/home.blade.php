@@ -98,7 +98,7 @@
 	    					<div class="contact-info left">
 	    						<b>Registration Venues:</b>
 								<ul>
-									<li>Online - <a href="http://www.runkitek.com/register">http://www.runkitek.com/register</a></li>
+									<li>Online - <a href="http://www.runkitek.com/register">http://www.runkitek.com</a></li>
 									<li>
 										In Store Registration – Garmin Stores:
 										<ul>
@@ -124,31 +124,29 @@
 	    	</div>
 	    </div>
 	    <div class="container text-center credits-logos-top" style="padding-top:20px;">
-	    	<div class="row">
+	    	<div class="row" style="padding-top:20px;">
 	    		<div class="col-md-4" style="padding-top:30px;">
+	    			<label><strong>Co-Presented By:</strong></label>
 	    			<img src="/media/davies.jpg" class="credit-logos" alt="Davies">
 	    		</div>
 	    		<div class="col-md-4">
-	    			<img src="/media/uap.png" class="credit-logos" style="height: 200px;">
+	    			<label><strong>For the Benifit of</strong></label>
+	    			<div>
+	    				<img src="/media/uap.png" class="credit-logos" style="height: 200px;">
+	    			</div>
+	    			<div style="padding-top: 60px;">
+	    				<img src="/media/as.png" class="credit-logos" style="height: 80px;">
+	    			</div>
 	    			
 	    		</div>
 	    		<div class="col-md-4" style="padding-top:30px;">
-	    			<img src="/media/as.png" class="credit-logos" style="height: 80px;">
+	    			<label><strong>Event Specialist</strong></label>
+	    			<div>
+	    				<a href="http://par.com.ph/">
+		    				<img src="/media/logo-par.773d7a73.png" alt="Pinoy Aspiring Runners">
+		    			</a>
+	    			</div>
 	    			
-	    		</div>
-	    	</div>
-	    </div>
-	    <div class="container credits-logos-bottom">
-	    	<div class="row text-center" style="padding-top:30px;">
-	    		<div class="col-md-6">
-	    			<a href="http://par.com.ph/">
-	    				<img src="/media/logo-par.773d7a73.png" alt="Pinoy Aspiring Runners">
-	    			</a>
-	    		</div>
-	    		<div class="col-md-6">
-	    			<a href="https://multisyscorp.com">
-	    				<img src="/media/logo-multisys.8037cfa3.png"  class="credit-logos" alt="MultiSys Technologies Corporation" style="height: 80px;">
-	    			</a>
 	    		</div>
 	    	</div>
 	    </div>

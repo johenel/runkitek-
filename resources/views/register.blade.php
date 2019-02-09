@@ -109,12 +109,12 @@
 							<label class="form-check-label">Check here to indicate that you have read and agree to the <br><a href="#" class="taa-text"><span class="text-primary"> Terms &amp; Conditions </span></a>
 							</label>
 						</div>
-						<a href="/downloadables/ACCIDENT-WAIVER-AND-RELEASE-OF-LIABILITY-FORM.pdf" target="_blank" class="rs-element rs-button rs-button--large rs-button--value rs-button--disabled -full form-control" style="margin-top: 10px;color:white;background: #888;" download="ACCIDENT-WAIVER-AND-RELEASE-OF-LIABILITY-FORM">
-							<div class="rs-button__helper">
-								
-							</div>
-							<span class="rs-button__value">Runners Waiver</span>
-						</a>
+						<div class="form-check">
+							<input type="checkbox" class="form-check-input"  name="download-waiver">
+								<a class="waiver-download" href="/downloadables/ACCIDENT-WAIVER-AND-RELEASE-OF-LIABILITY-FORM.pdf" download="ACCIDENT-WAIVER-AND-RELEASE-OF-LIABILITY-FORM" style="display: none;">Download</a>
+							<label class="form-check-label">Download Waiver</label>
+							</label>
+						</div>
 					</div>
 				</div>
 				<div class="form-group form-row row text-center">

@@ -15,7 +15,7 @@
 				@csrf
 				<div class="event-header" style="margin-bottom: 20px;">
 					<h1 class="title">Sign In</h1>
-					<h3 class="subtitle">Access your account for Runkitek Marathon Event</h3>
+					<h3 class="subtitle">Access your account for Runkitek</h3>
 				</div>
 				<div class="form-group form-row row">
 					<div class="col-12">
