@@ -111,7 +111,7 @@
 			                    </div>
 			                </div>
 			            </div>
-			            <div class="col-lg-12 text-center mt-5"><small>Delivery fee P150 + 50 Convinience fee</small>
+			            <div class="col-lg-12 text-center mt-5"><small style="color:red;">Note: Additional fee of 150 + 50 pesos to use this e-payment service</small>
 			                <p class="my-3" style="    padding: 20px;
     border: dashed 1px #ddd;">Join us as we aim to promote health and wellness campaigns and raise funds for the community service-related initiatives and projects of UAP’s outreach program, Bayanihang Arkitektura. Register now and see you all on the race day! #Runkitek2019</p>
 			            </div>
