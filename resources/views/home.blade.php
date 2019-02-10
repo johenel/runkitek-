@@ -130,7 +130,7 @@
 	    			<img src="/media/davies.jpg" class="credit-logos" alt="Davies">
 	    		</div>
 	    		<div class="col-md-4">
-	    			<label><strong>For the Benifit of</strong></label>
+	    			<label><strong>For the Benefit of</strong></label>
 	    			<div>
 	    				<img src="/media/uap.png" class="credit-logos" style="height: 200px;">
 	    			</div>
