@@ -1,7 +1,9 @@
 @extends('layouts.default')
 @section('content')
 <section id="loginPage" class="register-account">
-	<div class="event-cover"></div>
+	<div class="event-cover">
+		<img src="/media/runkitek-poster-final.jpg">
+	</div>
 	<div class="event-form">
 		<div class="event-box">
 			@if($errors->any())

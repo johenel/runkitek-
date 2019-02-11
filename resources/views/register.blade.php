@@ -2,7 +2,9 @@
 @section('content')
 <script type="text/javascript" src="/js/register.js"></script>
 <section id="registerPage" class="register-account">
-	<div class="event-cover"></div>
+	<div class="event-cover">
+		<img src="/media/runkitek-poster-final.jpg">
+	</div>
 	<div class="event-form">
 		<div class="event-box">
 			@if($errors->any())
@@ -15,7 +17,7 @@
 			<form action="/register" method="post">
 				@csrf
 				<div class="event-header">
-					<h1 class="title">Free Sign Up</h1>
+					<h1 class="title">Sign Up</h1>
 					<h3 class="subtitle">Register for Runkitek 2019</h3>
 				</div>
 				<div class="form-group form-row row">
@@ -112,7 +114,7 @@
 						<div class="form-check">
 							<input type="checkbox" class="form-check-input"  name="download-waiver">
 								<a class="waiver-download" href="/downloadables/ACCIDENT-WAIVER-AND-RELEASE-OF-LIABILITY-FORM.pdf" download="ACCIDENT-WAIVER-AND-RELEASE-OF-LIABILITY-FORM" style="display: none;">Download</a>
-							<label class="form-check-label">Download Waiver</label>
+							<label class="form-check-label">Waiver</label>
 							</label>
 						</div>
 					</div>

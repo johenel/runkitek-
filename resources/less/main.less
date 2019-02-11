@@ -2,6 +2,29 @@ body {
 	background:white;
 }
 
+#adminLogin {
+    height: 100vh;
+    padding-top:60px;
+    .login-form-box {
+        width: 325px;
+        margin: auto;
+        .card-header {
+            background:#333;
+            color: white;
+        }
+    }
+}
+
+.race-freebies  {
+    text-align:center;
+    padding-top:20px;
+    padding-bottom:20px;
+    img {
+        width: 300px;
+        margin-bottom: 20px;
+    }
+}
+
 .credit-logos {
    height: 125px;
     width: 240px;
@@ -155,8 +178,8 @@ footer {
 	    margin: 130px auto 40px;
 	    z-index: 2;
 	    position: relative;
-	    width: 600px;
-	    height: 300px;
+	    width: 700px;
+	    height: 350px;
 	}
 	>.btn, .title {
 	    letter-spacing: 1px;
@@ -166,7 +189,7 @@ footer {
 	    color: white;
 	}
 	>.btn {
-		margin-top: 80px;
+		margin-top: 25px;
 	    padding: 0;
 	    width: 300px;
 	    border-radius: 4px;
@@ -264,7 +287,13 @@ footer {
         overflow: hidden;
         position: relative;
         float: left;
-        background: linear-gradient(#000000e8, rgba(64, 64, 64, 0.84)), url(/media/register-cover.6b87995e.jpg);
+        img {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+        }
     }
     .event-form {
         width: 60%;
@@ -662,7 +691,7 @@ footer {
     }
 
     .event-hero .btn {
-        margin-top: 35px;
+       margin-top: 75px;
     }
 
     .event-hero .signin {
@@ -781,6 +810,13 @@ footer {
 }
 
 @media(max-width: 375px) {
+    .event-details > .content > .event-box > .event-title > .title {
+        font-size: 28px;
+    }
+    .event-hero .title {
+        font-size: 15px;
+    }
+
     .event-details {
         padding: 20px 40px;
     }
@@ -790,6 +826,8 @@ footer {
     }
     .event-hero .logo {
         margin: 30px auto 10px;
+        height: 180px;
+
     }
 
     .event-hero .btn {
@@ -801,11 +839,10 @@ footer {
     }
 
     .event-hero .register.btn {
-        margin-top: 15px;
-    }
+        margin-top: 50px;    }
 
     .event-hero .event-background {
-        height: 420px;
+        height: 375px;
     }
 
 
@@ -813,7 +850,7 @@ footer {
 
 @media(max-width: 320px) {
     .event-hero .title {
-        font-size: 18px;
+        font-size: 14px;
         padding: 0px 11px;
     }
     .event-hero .event-background {

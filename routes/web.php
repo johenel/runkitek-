@@ -42,4 +42,8 @@ Route::middleware(['auth'])->group(function() {
 	});
 });
 
+//ADMIN ROUTES
+
+Route::get('/admin/login', 'Admin\AdminController@index');
+
 

@@ -73,6 +73,19 @@
 	    				</div>
 	    			</div>
 	    		</div>
+	    		<div class="col-md-12">
+    				<div class="row race-freebies">
+    					<div class="col-md-4 col-sm-4">
+    						<img src="/media/tshirt-layout.jpg" class="img-thumbnail">
+    					</div>
+    					<div class="col-md-4 col-sm-4">
+    						<img src="/media/medal-layout.jpg" class="img-thumbnail">
+    					</div>
+    					<div class="col-md-4 col-sm-4">
+    						<img src="/media/racebib-layout.jpg" class="img-thumbnail">
+    					</div>
+    				</div>
+    			</div>
 	    	</div>
 	    </div>
 	    <!-- <div class="content mt-5 container">

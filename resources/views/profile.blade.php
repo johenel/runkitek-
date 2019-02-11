@@ -23,7 +23,7 @@
                 </div>
                 <div class="card mb-3">
                     <div class="card-header p-3 bg-takbro">
-                        <p class="m-0 text-white text-uppercase">Downloadable Forms</p>
+                        <p class="m-0 text-white text-uppercase">Frequently Asked Questions (FAQ)</p>
                     </div>
                     <div class="card-body p-3">
                         <div class="container">
@@ -31,7 +31,7 @@
                                 <div class="col-md-12">
                                 	<!-- <a class="btn mb-2 btn-block btn-small btn-primary" role="button" href="/static/media/TakBro-2019-PARENTAL-CONSENT-FORM-Fillable-Form.9c88bef8.pdf" download="TakBro-2019-PARENTAL-CONSENT-FORM-Fillable-Form" style="background: #333;">Parental Consent Form</a>
                                 	<a class="btn mb-2 btn-block btn-small btn-primary" role="button" href="/static/media/TakBro-2019-RACE-AGREEMENT-FORM-Fillable-Form.68033b05.pdf" download="TakBro-2019-RACE-AGREEMENT-FORM-Fillable-Form" style="background: #333;">Race Agreement Form</a> -->
-                                	<a class="btn mb-2 btn-block btn-small btn-primary" role="button" href="/downloadables/ACCIDENT-WAIVER-AND-RELEASE-OF-LIABILITY-FORM.pdf" download="ACCIDENT-WAIVER-AND-RELEASE-OF-LIABILITY-FORM" style="background: #333;">Runners Waiver</a>
+                                	<a class="btn mb-2 btn-block btn-small btn-primary" role="button" href="/downloadables/ACCIDENT-WAIVER-AND-RELEASE-OF-LIABILITY-FORM.pdf" download="ACCIDENT-WAIVER-AND-RELEASE-OF-LIABILITY-FORM" style="background: #333;">FAQ Download</a>
                                 	</div>
                             </div>
                         </div>
