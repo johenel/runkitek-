@@ -1,6 +1,31 @@
 body {
   background: white;
 }
+#adminDashboard .table-bordered td,
+#adminDashboard .table-bordered th {
+  white-space: nowrap;
+}
+#adminDashboard #mainSideNav {
+  height: 100vh;
+  background: #333;
+  padding-top: 30px;
+}
+#adminDashboard #mainSideNav hr {
+  border-top: 1px solid #7b7b7b;
+}
+#adminDashboard #mainSideNav ul {
+  list-style-type: none;
+  padding: 0px;
+}
+#adminDashboard #mainSideNav a {
+  color: #fbfbfb;
+}
+#adminDashboard #mainSideNav a:hover {
+  text-decoration: none;
+}
+#adminDashboard #dashboardPage {
+  padding: 20px;
+}
 #adminLogin {
   height: 100vh;
   padding-top: 60px;

@@ -13,4 +13,9 @@ class Users extends Model
     {
     	return $this->hasOne('App\Models\UserDetails');
     }
+
+    public function transactions()
+    {
+    	return $this->hasOne('App\Models\Transactions');
+    }
 }

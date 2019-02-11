@@ -45,5 +45,8 @@ Route::middleware(['auth'])->group(function() {
 //ADMIN ROUTES
 
 Route::get('/admin/login', 'Admin\AdminController@index');
-
-
+Route::post('/admin/login', 'Admin\AdminController@login');
+Route::get('/admin/logout', 'Admin\AdminController@logout');
+Route::middleware(['admin.auth'])->group(function() {
+	Route::get('/admin/participants', 'Admin\AdminController@participantsIndex');
+});
