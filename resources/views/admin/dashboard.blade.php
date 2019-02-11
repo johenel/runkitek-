@@ -55,7 +55,7 @@
 								@if($p->transactions['status'] == 'P')
 									<span style="color:orange;font-weight: bold;">PENDING</span>
 								@else 
-									<span style="color:orange;font-weight: bold;">PAID</span>
+									<span style="color:green;font-weight: bold;">PAID</span>
 								@endif
 							@endif
 							
