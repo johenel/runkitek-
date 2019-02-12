@@ -3,7 +3,7 @@
 <section id="dashboardPage">
 	<h1>Participants</h1>
 	<hr>
-	<button class="btn btn-success" type="button">Excel Report</button>
+	<a href="/admin/participants/export" class="btn btn-success" type="button">Excel Report</a>
 	<p></p>
 	<form id="statusFilterForm" action="/admin/participants/filter" method="get">
 		<div class="filter-status" style="margin-bottom: 20px;display: inline-block;vertical-align: top;margin-right: 20px;">

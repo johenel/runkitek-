@@ -25,7 +25,7 @@ Route::get('/logout', 'LoginController@logout');
 Route::post('/transactions/callback', 'TransactionsController@callback');
 
 //LOGGED IN USER ROUTES
-Route::middleware(['auth'])->group(function() {
+Route::middleware(['auth','set.headers'])->group(function() {
 	Route::get('/profile/incomplete', 'DashboardController@incompleteIndex');
 	Route::post('/profile/incomplete/submit', 'IncompleteProfileController@submit');
 	Route::middleware(['incomplete-profile'])->group(function() {
@@ -47,7 +47,10 @@ Route::middleware(['auth'])->group(function() {
 Route::get('/admin/login', 'Admin\AdminController@index');
 Route::post('/admin/login', 'Admin\AdminController@login');
 Route::get('/admin/logout', 'Admin\AdminController@logout');
-Route::middleware(['admin.auth'])->group(function() {
+Route::middleware(['admin.auth','set.headers'])->group(function() {
 	Route::get('/admin/participants', 'Admin\AdminController@participantsIndex');
 	Route::get('/admin/participants/filter', 'Admin\AdminController@filterStatus');
+
 });
+
+Route::get('/admin/participants/export', 'Admin\AdminController@exportUsersReport');

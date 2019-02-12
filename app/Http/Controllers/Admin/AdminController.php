@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\UsersExport;
 use App\Models\Admins;
 use App\Models\Users;
 use Validator;
@@ -113,5 +115,10 @@ class AdminController extends Controller
     	$this->initialize();
 
     	return view('admin.login');
+    }
+
+    public function exportUsersReport(Request $request)
+    {
+        return Excel::download(new UsersExport, 'participants.xlsx');
     }
 }

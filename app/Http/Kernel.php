@@ -35,7 +35,7 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
-            \App\Http\Middleware\SetHeaders::class,
+            
         ],
 
         'api' => [
@@ -64,6 +64,7 @@ class Kernel extends HttpKernel
         'auth' => \App\Http\Middleware\Authenticate::class,
         'incomplete-profile' => \App\Http\Middleware\ProfileIncomplete::class,
         'admin.auth' => \App\Http\Middleware\AdminAuth::class,
+        'set.headers' => \App\Http\Middleware\SetHeaders::class,
     ];
 
     /**
