@@ -67,12 +67,43 @@ class AdminController extends Controller
         return true;        
     }
 
+    public function filterStatus(Request $request)
+    {
+        $filter = $request->rg_status;
+        $date = $request->date;
+
+        if($filter == 'all') {
+            $users = Users::with('details')->with('transactions');
+        } else {
+            $users = Users::whereHas('transactions', function($q) use ($filter) {
+                $q->where('status', $filter);
+            })->with('details')->with('transactions');
+        }
+
+        if($date) {
+            $date = date('Y-m-d',strtotime($date));
+            $users = $users->where('created_at', 'LIKE', '%'.$date.'%')->get();
+        } else {
+            $users = $users->get();
+        }
+        
+
+        $response = [];
+        $response['participants'] = $users;
+        $response['filter_status'] = $request->rg_status;
+        $response['filter_date'] = $request->date;
+
+        return view('admin.dashboard', $response);
+    }
+
     public function participantsIndex(Request $request)
     {
         $users = Users::with('details')->with('transactions')->get();
 
         $response = [];
         $response['participants'] = $users;
+        $response['filter_status'] = 'all';
+        $response['filter_date'] = '';
 
         return view('admin.dashboard', $response);
     }

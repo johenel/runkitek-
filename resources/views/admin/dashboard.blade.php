@@ -5,6 +5,39 @@
 	<hr>
 	<button class="btn btn-success" type="button">Excel Report</button>
 	<p></p>
+	<form id="statusFilterForm" action="/admin/participants/filter" method="get">
+		<div class="filter-status" style="margin-bottom: 20px;display: inline-block;vertical-align: top;margin-right: 20px;">
+			<div>
+				<label for="inputLastName" class="rs-element rs-form-label"><b>STATUS FILTER</b></label>
+			</div>
+			<div class="radio-group d-inline">
+				<input type="radio" name="rg_status" value="all" @if($filter_status=='all') checked @endif>
+				<span>ALL</span>
+			</div>
+			<div class="radio-group d-inline">
+				<input type="radio" name="rg_status" value="S" @if($filter_status=='S') checked @endif>
+				<span>PAID</span>
+			</div>
+			<div class="radio-group d-inline">
+				<input type="radio" name="rg_status" value="P" @if($filter_status=='P') checked @endif>
+				<span>PENDING</span>
+			</div>
+		</div>
+		<div class="filter-date" style="width:300px;margin-bottom: 20px;display: inline-block;">
+			<label for="inputLastName" class="rs-element rs-form-label"><b>REGISTRATION DATE FILTER</b></label>
+	        <div class="rs-element rs-input -full">
+	            <div class="rs-input-wrap">
+	                <div class="input-group date">
+					    <input type="text" class="form-control" name="date" value="{{$filter_date}}" autocomplete="off" required>
+					    <div class="input-group-addon">
+					        <i class="fa fa-calendar" aria-hidden="true"></i>
+					    </div>
+					</div>
+	            </div>
+	        </div>
+	        <button type="button" class="btn btn-primary clear-date" style="margin-top: 10px;">CLEAR DATE</button>
+		</div>
+	</form>
 	<div class="data-table">
 		<table class="table table-striped table-bordered">
 			<thead>
@@ -74,7 +107,7 @@
 						</td>
 						<td>
 							@if($p->transactions['delivery_type'] == 'DELIVERY')
-								{{$p->delivery_address}}
+								{{$p->details['delivery_address']}}
 							@endif
 						</td>
 						<td>
