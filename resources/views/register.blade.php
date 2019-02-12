@@ -112,7 +112,7 @@
 							</label>
 						</div>
 						<div class="form-check">
-							<input type="checkbox" class="form-check-input"  name="download-waiver">
+							<input type="checkbox" class="form-check-input"  name="download-waiver" data-toggle="modal" data-target="#waiver">
 								<a class="waiver-download" href="/downloadables/ACCIDENT-WAIVER-AND-RELEASE-OF-LIABILITY-FORM.pdf" download="ACCIDENT-WAIVER-AND-RELEASE-OF-LIABILITY-FORM" style="display: none;">Download</a>
 							<label class="form-check-label">Waiver</label>
 							</label>
@@ -134,6 +134,26 @@
 		</div>
 	</div>
 </section>
+<div class="modal" id="waiver">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+    	<div class="modal-header">
+    		<h4 class="modal-title">Runner's Waiver</h4>
+    		<button type="button" class="close" data-dismiss="modal"> 
+    			<span aria-hidden="true">×</span>
+    			<span class="sr-only">Close</span>
+    		</button>
+    	</div>
+    	<div class="modal-body">
+    		<iframe id="fred" style="border:1px solid #666CCC;width: 100%;height: 500px;" title="PDF in an i-Frame" src="/downloadables/ACCIDENT-WAIVER-AND-RELEASE-OF-LIABILITY-FORM.pdf" frameborder="1" scrolling="auto" ></iframe>
+    	</div>
+    	<div class="modal-footer">
+    		<a  href="/downloadables/ACCIDENT-WAIVER-AND-RELEASE-OF-LIABILITY-FORM.pdf" download="ACCIDENT-WAIVER-AND-RELEASE-OF-LIABILITY-FORM" class="btn btn-success">Download</a>
+    		<a href="#" class="btn btn-success" data-dismiss="modal">Okay</a>
+    	</div>
+	</div>
+  </div>
+</div>
 <div class="modal" id="termsAndAgreementModal">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">

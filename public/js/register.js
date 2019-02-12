@@ -3,7 +3,7 @@ $(function() {
 	taaModalAgreeBtnListener();
 	taaModalDismissListener();
 	taaTextClickListener();
-	registerSubmitBtnListener();
+	// registerSubmitBtnListener();
 });
 
 function init()
@@ -18,25 +18,25 @@ function taaTextClickListener()
 	});
 }
 
-function registerSubmitBtnListener()
-{
-	$('form button[type=submit]').click(function(e) {
-			let a = $('input[name=terms_and_agreement]').is(':checked');
-			let b = $('input[name=email]').length;
-			let c = $('input[name=first_name]').length;
-			let c2 = $('input[name=password]').length;
-			let c3 = $('input[name=last_name]').length;
-			let c4 = $('input[name=password]').length;
-			let c5 = $('input[name=password_confirmation]').length;
-			let d = $('input[name=download-waiver]').is(':checked');
+// function registerSubmitBtnListener()
+// {
+// 	$('form button[type=submit]').click(function(e) {
+// 			let a = $('input[name=terms_and_agreement]').is(':checked');
+// 			let b = $('input[name=email]').length;
+// 			let c = $('input[name=first_name]').length;
+// 			let c2 = $('input[name=password]').length;
+// 			let c3 = $('input[name=last_name]').length;
+// 			let c4 = $('input[name=password]').length;
+// 			let c5 = $('input[name=password_confirmation]').length;
+// 			let d = $('input[name=download-waiver]').is(':checked');
 
 			
 
-			if(a && d && b > 0 && c > 0 && c3 > 0 && c4 > 0 && c5 > 0) {
-				$('a.waiver-download')[0].click();	
-			}
-	});
-}
+// 			if(a && d && b > 0 && c > 0 && c3 > 0 && c4 > 0 && c5 > 0) {
+// 				$('a.waiver-download')[0].click();	
+// 			}
+// 	});
+// }
 
 function taaModalDismissListener()
 {
