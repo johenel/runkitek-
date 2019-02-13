@@ -75,14 +75,14 @@
 	    		</div>
 	    		<div class="col-md-12">
     				<div class="row race-freebies">
-    					<div class="col-md-4 col-sm-4">
+    					<div class="col-md-12 col-sm-12">
     						<img src="/media/tshirt-layout.jpg" class="img-thumbnail">
     					</div>
-    					<div class="col-md-4 col-sm-4">
+    					<div class="col-md-12 col-sm-12">
     						<img src="/media/medal-layout.jpg" class="img-thumbnail">
     					</div>
-    					<div class="col-md-4 col-sm-4">
-    						<img src="/media/racebib-layout.jpg" class="img-thumbnail">
+    					<div class="col-md-12 col-sm-12">
+    						<img src="/media/racebib-layout.png" class="img-thumbnail">
     					</div>
     				</div>
     			</div>
@@ -148,7 +148,10 @@
 	    				<img src="/media/uap.png" class="credit-logos" style="height: 200px;">
 	    			</div>
 	    			<div style="padding-top: 60px;">
-	    				<img src="/media/as.png" class="credit-logos" style="height: 80px;">
+	    				<img src="/media/uap-logo.gif" class="credit-logos" style="height: 180px;">
+	    			</div>
+	    			<div style="padding-top: 30px;">
+	    				<img src="/media/GARMINLOGOBLACK.png" class="credit-logos" style="height: 80px;">
 	    			</div>
 	    			
 	    		</div>

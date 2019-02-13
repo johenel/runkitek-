@@ -44,8 +44,8 @@ body {
   padding-bottom: 20px;
 }
 .race-freebies img {
-  width: 300px;
-  margin-bottom: 20px;
+  width: 50%;
+  margin-bottom: 40px;
 }
 .credit-logos {
   height: 125px;
@@ -191,7 +191,7 @@ footer {
   box-shadow: 0 14px 24px 0 rgba(42, 60, 44, 0.2);
 }
 .event-hero .btn-secondary {
-  background: #333;
+  background: #000;
   border-radius: 5px;
   border: 1px solid #333;
   letter-spacing: 2px;
@@ -203,7 +203,7 @@ footer {
   border: 1px solid #3f5a42;
 }
 .event-hero .event-background {
-  background: linear-gradient(#000000e8, rgba(64, 64, 64, 0.84)), url(/media/hero-background.jpg);
+  background: linear-gradient(#000000e8, rgba(64, 64, 64, 0.84)), url(/media/blk-bg2.jpg);
   background-size: cover;
   height: 700px;
   width: 100%;
