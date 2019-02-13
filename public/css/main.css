@@ -642,6 +642,9 @@ footer {
   }
 }
 @media (max-width: 425px) {
+  .race-freebies img {
+    width: 100%;
+  }
   img.as-img {
     width: 200px;
     height: 70px;

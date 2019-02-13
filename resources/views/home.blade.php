@@ -76,6 +76,15 @@
 	    		<div class="col-md-12">
     				<div class="row race-freebies">
     					<div class="col-md-12 col-sm-12">
+    						<img src="/media/Runkitek Banner 01.jpg" class="img-thumbnail">
+    					</div>
+    					<div class="col-md-12 col-sm-12">
+    						<img src="/media/Runkitek Banner 02.jpg" class="img-thumbnail">
+    					</div>
+    					<div class="col-md-12 col-sm-12">
+    						<img src="/media/Runkitek Banner 03.jpg" class="img-thumbnail">
+    					</div>
+    					<div class="col-md-12 col-sm-12">
     						<img src="/media/tshirt-layout.jpg" class="img-thumbnail">
     					</div>
     					<div class="col-md-12 col-sm-12">
