@@ -149,27 +149,25 @@
 	    <div class="container text-center credits-logos-top" style="padding-top:20px;">
 	    	<div class="row" style="padding-top:20px;">
 	    		<div class="col-md-4" style="padding-top:30px;">
-	    			<label><strong>Co-Presented By:</strong></label>
-	    			<img src="/media/davies.jpg" class="credit-logos" alt="Davies">
-	    		</div>
-	    		<div class="col-md-4">
-	    			<label><strong>For the Benefit of</strong></label>
+	    			<label><strong>Brought to you by:</strong></label>
 	    			<div>
 	    				<img src="/media/uap.png" class="credit-logos" style="height: 200px;">
 	    			</div>
 	    			<div style="padding-top: 60px;">
 	    				<img src="/media/uap-logo.gif" class="credit-logos" style="height: 180px;">
 	    			</div>
-	    			<div style="padding-top: 30px;">
-	    				<img src="/media/GARMINLOGOBLACK.png" class="credit-logos" style="height: 80px;">
-	    			</div>
-	    			
+	    		</div>
+	    		<div class="col-md-4" style="padding-top:30px;">
+	    			<label><strong>Co-Presented By:</strong></label>
+	    			<img src="/media/davies.jpg" class="credit-logos" alt="Davies" style="margin-top:15px;">
+	    			<label style="margin-top: 60px;"><strong>Official Timer and Registration Partner:</strong></label>
+	    			<img src="/media/GARMINLOGOBLACK.png" class="credit-logos" style="height: 80px;">
 	    		</div>
 	    		<div class="col-md-4" style="padding-top:30px;">
 	    			<label><strong>Event Specialist</strong></label>
 	    			<div>
 	    				<a href="http://par.com.ph/">
-		    				<img src="/media/logo-par.773d7a73.png" alt="Pinoy Aspiring Runners">
+		    				<img src="/media/logo-par.773d7a73.png" alt="Pinoy Aspiring Runners" style="margin-top:15px;"> 
 		    			</a>
 	    			</div>
 	    			
