@@ -84,9 +84,9 @@
 			                        <div class="col-lg-4 col-md-4 col-sm-4 col-4">
 			                            <div class="event-category">
 			                                <h1 class="category">3K</h1>
-			                                <h3 class="subtitle">₱ 650</h3>
+			                                <h3 class="subtitle">₱ 700</h3>
 			                                <div class="event-actions">
-			                                    <button class="btn btn-sm btn-secondary choose-cat" type="button" category="3K" amount="650">Choose</button>
+			                                    <button class="btn btn-sm btn-secondary choose-cat" type="button" category="3K" amount="700">Choose</button>
 			                                </div>
 			                            </div>
 			                        </div>
