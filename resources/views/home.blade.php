@@ -136,6 +136,7 @@
 	    					<div class="contact-info right">
 		    					<b>For more information:</b>
 								<div>
+									<div>Email - inforunkitek@gmail.com</div>
 									<div>Visit - <a href="https://www.facebook.com/events/308844763306886/">https://www.facebook.com/events/308844763306886/</a></div>
 									<div>Contact # - 09157688735</div>
 								</div>
