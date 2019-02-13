@@ -44,7 +44,7 @@ body {
   padding-bottom: 20px;
 }
 .race-freebies img {
-  width: 50%;
+  width: 60%;
   margin-bottom: 40px;
 }
 .credit-logos {
@@ -603,6 +603,9 @@ footer {
   }
 }
 @media (max-width: 768px) {
+  .race-freebies img {
+    width: 80%;
+  }
   .credit-logos {
     height: 100px;
     width: 200px;
