@@ -50,9 +50,11 @@
 				<th>Reference No.</th>
 				<th>Status</th>
 				<th>Amount</th>
+				<th>Payment Channel</th>
 				<th>Delivery Type</th>
 				<th>Category</th>
 				<th>Size</th>
+				<th>Delivery Region</th>
 				<th>Delivery Address</th>
 				<th>Pick Up Location</th>
 				<th>Transaction Date</th>
@@ -97,6 +99,9 @@
 							{{$p->transactions['amount']}}
 						</td>
 						<td>
+							{{$p->transactions['payment_channel']}}
+						</td>
+						<td>
 							{{$p->transactions['delivery_type']}}
 						</td>
 						<td>
@@ -104,6 +109,9 @@
 						</td>
 						<td>
 							{{$p->transactions['size']}}
+						</td>
+						<td>
+							{{$p->details['delivery_region']}}
 						</td>
 						<td>
 							@if($p->transactions['delivery_type'] == 'DELIVERY')

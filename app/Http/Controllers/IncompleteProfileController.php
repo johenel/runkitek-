@@ -24,6 +24,7 @@ class IncompleteProfileController extends Controller
 		$draft->email = $request->email;
 		$draft->contact_number = $request->mobile_no;
 		$draft->country = $request->country;
+		$draft->delivery_region = $request->delivery_region;
 		$draft->delivery_address = $request->full_address;
 		$draft->emergency_name = $request->emergency_name;
 		$draft->emergency_relationship = $request->emergency_relationship;
@@ -77,6 +78,7 @@ class IncompleteProfileController extends Controller
 			$details->group_tag = $draft->group_tag;
 			$details->nationality = $draft->nationality;
 			$details->country = $draft->country;
+			$details->delivery_region = $draft->delivery_region;
 			$details->delivery_address = $draft->delivery_address;
 			$details->emergency_contact_name = $draft->emergency_name;
 			$details->emergency_contact_relationship = $draft->emergency_relationship;

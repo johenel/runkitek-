@@ -175,7 +175,6 @@
 		                            <div class="col-lg-12">
 		                                <label for="inputCountry" class="rs-element rs-form-label">Country <span class="required">*</span></label>
 										<select id="countrySelect" class="form-control" name="country">
-											{{session()->get('user')->details->country}}
                               				@if($country_codes['countryCodes'])
 			                          			@foreach($country_codes['countryCodes'] as $c)
 			                          				@if(session()->get('user')->details->country == $c['country_name'])
@@ -185,6 +184,16 @@
 			                          				@endif
 			                          			@endforeach
 			                          		@endif
+                              			</select>
+		                            </div>
+		                        </div>
+		                        <div class="form-group form-row">
+		                            <div class="col-lg-12">
+		                                <label for="inputCountry" class="rs-element rs-form-label">Delivery Region<span class="required">*</span></label>
+										<select id="deliveryRegionSelect" class="form-control" name="delivery_region">
+                              				<option @if(session()->get('user')->details->delivery_region == 'LUZON') selected @endif>LUZON</option>
+                              				<option @if(session()->get('user')->details->delivery_region == 'VISAYAS') selected @endif>VISAYAS</option>
+                              				<option @if(session()->get('user')->details->delivery_region == 'MINDANAO') selected @endif>MINDANAO</option>
                               			</select>
 		                            </div>
 		                        </div>

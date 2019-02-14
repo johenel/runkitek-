@@ -14,16 +14,11 @@ class TransactionsController extends Controller
 	public function index(Request $request)
 	{
 		$response = [];
-		$t = Transactions::where('users_id', $request->session()->get('user')->id)->get();
+		$t = Transactions::where('users_id', $request->session()->get('user')->id)->orderBy('created_at', 'DESC')->get();
 
-		if(count($t) > 0) {
-			// $status = $this->checkStatus($t[0], $request->root());
-			// dd($status);
-			$response['success'] = true;
-			$response['transaction'] = $t[0];
-		} else {
-			$response['success'] = false;
-		}
+		$response['success'] = true;
+		$response['transactions'] = $t;
+
 		return view('transaction-list', $response);
 	}
 
@@ -136,20 +131,25 @@ class TransactionsController extends Controller
 
         $userTransactions = Transactions::where('users_id', $request->session()->get('user')->id)->get();
 
-        if(count($userTransactions) > 0) {
-        	$validator->after(function($validator) {
-                $validator->errors()->add('error', 'A TRANSACTION already exist');
-            });
-            if($validator->fails()) {
-                $errors = $validator->errors();
-                return redirect('/events')->withErrors($validator);
-            }
-        }
+        // if(count($userTransactions) > 0) {
+        // 	$validator->after(function($validator) {
+        //         $validator->errors()->add('error', 'A TRANSACTION already exist');
+        //     });
+        //     if($validator->fails()) {
+        //         $errors = $validator->errors();
+        //         return redirect('/events')->withErrors($validator);
+        //     }
+        // }
 
         $amount = $request->amount;
 
         if($request->delivery_type == 'DELIVERY') {
-        	$amount = $request->amount + 150;
+        	if($request->session()->get('user')->details['delivery_region'] == 'LUZON') {
+        		$amount = $request->amount + 150;
+        	} else {
+        		$amount = $request->amount + 200;
+        	}
+        	
         }
 
     	$transaction = new Transactions;

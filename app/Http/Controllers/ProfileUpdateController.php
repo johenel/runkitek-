@@ -59,6 +59,7 @@ class ProfileUpdateController extends Controller
 		$draft->email = $request->email;
 		$draft->contact_number = $request->mobile_no;
 		$draft->country = $request->country;
+		$draft->delivery_region = $request->delivery_region;
 		$draft->delivery_address = $request->full_address;
 		$draft->avatar_img = $request->file('avatar_img');
 		//
@@ -107,6 +108,7 @@ class ProfileUpdateController extends Controller
 				'group_tag' => $draft->group_tag,
 				'nationality' => $draft->nationality,
 				'country' => $draft->country,
+				'delivery_region' => $draft->delivery_region,
 				'delivery_address' => $draft->delivery_address,
 			]);
 		});

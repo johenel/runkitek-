@@ -8,12 +8,12 @@
 	    <br>
 	    <br>
 	    <div class="text-center">
-	        <h1>TRANSACTION</h1>
+	        <h1>TRANSACTIONS</h1>
 	    </div>
 	    <br>
+	    @foreach($transactions as $transaction)
 	    <div class="row">
 	        <div class="col-lg-12">
-	        	
 	            <div class="d-md-block d-lg-block">
 	                <div class="card mb-3">
 	                    <div class="card-header bg-takbro">
@@ -43,9 +43,9 @@
 	                                    <td><b>{{$transaction->delivery_type}}</b></td>
 	                                </tr>
 	                                <tr>
-	                                    <td>Amount</td>
+	                                    <td>Total Amount</td>
 	                                    @if($transaction->delivery_type == 'DELIVERY')
-	                                    	<td><b>{{$transaction->amount}}</b> (150 Delivery Fee)</td>
+	                                    	<td><b>{{$transaction->amount}}</b> <span style="color:red;font-size:12px;"> (Delivery Fee of 150 for LUZON region and 200 for VISAYAS and MINDANAO region)</span></td>
 	                                    @else
 	                                    	<td><b>{{$transaction->amount}}</b></td>
 	                                    @endif
@@ -96,6 +96,7 @@
 	           
 	        </div>
 	    </div>
+	    @endforeach
 	</div>
 	@else
 		<div class="container text-center" style="height: 100vh;padding-top:40px;">

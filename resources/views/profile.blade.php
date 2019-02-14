@@ -31,7 +31,7 @@
                                 <div class="col-md-12">
                                 	<!-- <a class="btn mb-2 btn-block btn-small btn-primary" role="button" href="/static/media/TakBro-2019-PARENTAL-CONSENT-FORM-Fillable-Form.9c88bef8.pdf" download="TakBro-2019-PARENTAL-CONSENT-FORM-Fillable-Form" style="background: #333;">Parental Consent Form</a>
                                 	<a class="btn mb-2 btn-block btn-small btn-primary" role="button" href="/static/media/TakBro-2019-RACE-AGREEMENT-FORM-Fillable-Form.68033b05.pdf" download="TakBro-2019-RACE-AGREEMENT-FORM-Fillable-Form" style="background: #333;">Race Agreement Form</a> -->
-                                	<a class="btn mb-2 btn-block btn-small btn-primary" role="button" href="/downloadables/ACCIDENT-WAIVER-AND-RELEASE-OF-LIABILITY-FORM.pdf" download="ACCIDENT-WAIVER-AND-RELEASE-OF-LIABILITY-FORM" style="background: #333;">FAQ Download</a>
+                                	<button class="btn mb-2 btn-block btn-small btn-primary" type="button" href="/downloadables/ACCIDENT-WAIVER-AND-RELEASE-OF-LIABILITY-FORM.pdf" style="background: #333;" data-toggle="modal" data-target="#waiver">FAQ Download</button>
                                 	</div>
                             </div>
                         </div>
@@ -120,7 +120,12 @@
 			                        </div>
 			                    </div>
 			                    <div class="col-md-12">
-			                        <div class="detail-field"><span class="detail-title text-muted font-weight-bold text-uppercase">Full Address</span>
+			                        <div class="detail-field"><span class="detail-title text-muted font-weight-bold text-uppercase">Delivery Region</span>
+			                            <p class="detail-body mt-1 text-black">{{session()->get('user')->details->delivery_region}}</p>
+			                        </div>
+			                    </div>
+			                    <div class="col-md-12">
+			                        <div class="detail-field"><span class="detail-title text-muted font-weight-bold text-uppercase">Full Address (Delivery)</span>
 			                            <p class="detail-body mt-1 text-black">{{session()->get('user')->details->delivery_address}}</p>
 			                        </div>
 			                    </div>
@@ -158,4 +163,24 @@
         </div>
     </div>
 </section>
+<div class="modal" id="waiver">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+    	<div class="modal-header">
+    		<h4 class="modal-title">Frequently Asked Questions</h4>
+    		<button type="button" class="close" data-dismiss="modal"> 
+    			<span aria-hidden="true">×</span>
+    			<span class="sr-only">Close</span>
+    		</button>
+    	</div>
+    	<div class="modal-body">
+    		<iframe id="fred" style="border:1px solid #666CCC;width: 100%;height: 500px;" title="PDF in an i-Frame" src="/downloadables/ACCIDENT-WAIVER-AND-RELEASE-OF-LIABILITY-FORM.pdf" frameborder="1" scrolling="auto" ></iframe>
+    	</div>
+    	<div class="modal-footer">
+    		<a  href="/downloadables/ACCIDENT-WAIVER-AND-RELEASE-OF-LIABILITY-FORM.pdf" download="ACCIDENT-WAIVER-AND-RELEASE-OF-LIABILITY-FORM" class="btn btn-success">Download</a>
+    		<a href="#" class="btn btn-success" data-dismiss="modal">Okay</a>
+    	</div>
+	</div>
+  </div>
+</div>
 @endsection

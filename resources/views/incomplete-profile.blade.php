@@ -183,6 +183,16 @@
                         </div>
                         <div class="form-group form-row">
                             <div class="col-lg-12">
+                                <label for="inputCountry" class="rs-element rs-form-label">Delivery Region<span class="required">*</span></label>
+                                <select id="countrySelect" class="form-control" name="delivery_region">
+                                    <option>LUZON</option>
+                                    <option>VISAYAS</option>
+                                    <option>MINDANAO</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group form-row">
+                            <div class="col-lg-12">
                                 <label for="inputFullAddress" class="rs-element rs-form-label">Complete Address <span class="required">* ( Delivery Address )</span></label>
                                 <div class="rs-element rs-input rs-textarea -full "><textarea type="text" name="full_address" row="2" placeholder="Put your current address..." id="inputFullAddress" class="rs-element form-control" required></textarea></div>
                             </div>

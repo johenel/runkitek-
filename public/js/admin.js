@@ -38,7 +38,7 @@ function usersDataTablesInit()
 	let table = $('.data-table table').DataTable({
 		"scrollX": true,
 		"autoWidth": false,
-		 "order": [[ 19, "desc" ]]
+		 "order": [[ 21, "desc" ]]
 	});
 }
 
