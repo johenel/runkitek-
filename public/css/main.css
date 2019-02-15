@@ -559,6 +559,10 @@ footer {
   background: linear-gradient(-180deg, hsla(252, 56%, 63%, 0.36), #fff 90%), url(/media/hero-background.jpg) no-repeat 50%;
   background-size: cover;
 }
+#eventsPage .partners-images img {
+  padding-top: 60px;
+  width: 100%;
+}
 #eventsPage .event-category {
   text-align: center;
 }
@@ -603,6 +607,10 @@ footer {
   }
 }
 @media (max-width: 768px) {
+  .bayadcenterlogo {
+    width: 170px !important;
+    height: 212px;
+  }
   .race-freebies img {
     width: 80%;
   }
@@ -645,6 +653,18 @@ footer {
   }
 }
 @media (max-width: 425px) {
+  .desc-btm {
+    text-align: justify;
+  }
+  .resiboimg {
+    width: 100% !important;
+  }
+  .qrcode-mobile {
+    display: table-row !important;
+  }
+  .qr-code {
+    display: none;
+  }
   .race-freebies img {
     width: 100%;
   }

@@ -31,7 +31,8 @@
                                 <div class="col-md-12">
                                 	<!-- <a class="btn mb-2 btn-block btn-small btn-primary" role="button" href="/static/media/TakBro-2019-PARENTAL-CONSENT-FORM-Fillable-Form.9c88bef8.pdf" download="TakBro-2019-PARENTAL-CONSENT-FORM-Fillable-Form" style="background: #333;">Parental Consent Form</a>
                                 	<a class="btn mb-2 btn-block btn-small btn-primary" role="button" href="/static/media/TakBro-2019-RACE-AGREEMENT-FORM-Fillable-Form.68033b05.pdf" download="TakBro-2019-RACE-AGREEMENT-FORM-Fillable-Form" style="background: #333;">Race Agreement Form</a> -->
-                                	<button class="btn mb-2 btn-block btn-small btn-primary" type="button" href="/downloadables/ACCIDENT-WAIVER-AND-RELEASE-OF-LIABILITY-FORM.pdf" style="background: #333;" data-toggle="modal" data-target="#waiver">FAQ Download</button>
+                                	<button class="btn mb-2 btn-block btn-small btn-primary" type="button" href="/downloadables/RUNKITEK-2019-FAQS.pdf" style="background: #333;" data-toggle="modal" data-target="#faq">FAQ Download</button>
+                                	<button class="btn mb-2 btn-block btn-small btn-primary" type="button" href="/downloadables/ACCIDENT-WAIVER-AND-RELEASE-OF-LIABILITY-FORM.pdf" style="background: #333;" data-toggle="modal" data-target="#waiver">Waiver</button>
                                 	</div>
                             </div>
                         </div>
@@ -162,12 +163,32 @@
 			</div>
         </div>
     </div>
+    <div class="modal" id="faq">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+    	<div class="modal-header">
+    		<h4 class="modal-title">Frequently Asked Questions</h4>
+    		<button type="button" class="close" data-dismiss="modal"> 
+    			<span aria-hidden="true">×</span>
+    			<span class="sr-only">Close</span>
+    		</button>
+    	</div>
+    	<div class="modal-body">
+    		<iframe id="fred" style="border:1px solid #666CCC;width: 100%;height: 500px;" title="PDF in an i-Frame" src="/downloadables/RUNKITEK-2019-FAQS.pdf" frameborder="1" scrolling="auto" ></iframe>
+    	</div>
+    	<div class="modal-footer">
+    		<a  href="/downloadables/RUNKITEK-2019-FAQS.pdf" download="RUNKITEK-2019-FAQS" class="btn btn-success">Download</a>
+    		<a href="#" class="btn btn-success" data-dismiss="modal">Okay</a>
+    	</div>
+	</div>
+  </div>
+</div>
 </section>
 <div class="modal" id="waiver">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
     	<div class="modal-header">
-    		<h4 class="modal-title">Frequently Asked Questions</h4>
+    		<h4 class="modal-title">Runner's Waiver</h4>
     		<button type="button" class="close" data-dismiss="modal"> 
     			<span aria-hidden="true">×</span>
     			<span class="sr-only">Close</span>

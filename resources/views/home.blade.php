@@ -165,7 +165,7 @@
 	    			<img src="/media/GARMINLOGOBLACK.png" class="credit-logos" style="height: 80px;">
 	    		</div>
 	    		<div class="col-md-3" style="padding-top:30px;">
-	    			<label><strong>For The Benifit Of:</strong></label>
+	    			<label><strong>For The Benefit Of:</strong></label>
 	    			<div>
 	    				<img src="/media/uap.png" class="credit-logos" style="height: 200px;">
 	    			</div>

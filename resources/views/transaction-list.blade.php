@@ -17,14 +17,31 @@
 	            <div class="d-md-block d-lg-block">
 	                <div class="card mb-3">
 	                    <div class="card-header bg-takbro">
-	                        <p class="m-0 text-uppercase"><h2>{{$transaction->category}} SHIRT</h2></p>
+	                        <p class="m-0 text-uppercase"><h3>{{$transaction->category}} SHIRT</h3></p>
 	                    </div>
 	                    <div class="card-body p-0 m-0">
 	                        <table class="table table-bordered table-condensed p-0 m-0">
 	                            <tbody>
+	                            	<tr class="qrcode-mobile" style="display: none;">
+	                            		<td>QR Code</td>
+	                            		<td style="text-align: center;">
+	                            			@if($transaction->reference_no)
+	                            			<p class="badge">Reference Number</p>
+	                            			<img alt="jsx-a11y/alt-text" class="image-responsive" src="https://chart.googleapis.com/chart?cht=qr&amp;chl={{$transaction->reference_no}}&amp;chs=180x180&amp;choe=UTF-8&amp;chld=L|2">{{$transaction->reference_no}}
+	                            			@else 
+	                            			<h4 style="color:red;" class="img-thumbnail">Please confirm transaction to get your reference no.</h4>
+	                            			@endif
+	                            		</td>
+	                            	</tr>
 	                                <tr>
-	                                    <td rowspan="10" class="text-center" style="width: 200px;">
-	                                        <p class="badge">Reference Number</p><img alt="jsx-a11y/alt-text" class="image-responsive" src="https://chart.googleapis.com/chart?cht=qr&amp;chl={{$transaction->reference_no}}&amp;chs=180x180&amp;choe=UTF-8&amp;chld=L|2">{{$transaction->reference_no}}</td>
+	                                    <td rowspan="10" class="text-center qr-code" style="width: 200px;text-align: center;">
+	                                        @if($transaction->reference_no)
+	                            			<p class="badge">Reference Number</p>
+	                            			<img alt="jsx-a11y/alt-text" class="image-responsive" src="https://chart.googleapis.com/chart?cht=qr&amp;chl={{$transaction->reference_no}}&amp;chs=180x180&amp;choe=UTF-8&amp;chld=L|2">{{$transaction->reference_no}}
+	                            			@else 
+	                            			<h4 style="color:red;" class="img-thumbnail">Please confirm transaction to get your reference no.</h4>
+	                            			@endif
+	                                    </td>
 	                                    <td style="width: 200px;">Name</td>
 	                                    <td><b>
 	                                    	{{session()->get('user')->first_name}} {{session()->get('user')->last_name}}

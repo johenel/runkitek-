@@ -109,15 +109,33 @@
 			                            </div>
 			                        </div>
 			                    </div>
+			                    
 			                </div>
 			            </div>
 			            <div class="col-lg-12 text-center mt-5"><small style="color:red;">Note: Additional delivery fee of <b>150 PHP for LUZON region</b> and <b>200 PHP for VISAYAS and MINDANAO region</b> + 50 PHP to use this e-payment service</small>
-			                <p class="my-3" style="    padding: 20px;
+			                <p class="my-3 desc-btm" style="    padding: 20px;
     border: dashed 1px #ddd;">Join us as we aim to promote health and wellness campaigns and raise funds for the community service-related initiatives and projects of UAP’s outreach program, Bayanihang Arkitektura. Register now and see you all on the race day! #Runkitek2019</p>
 			            </div>
+			            <div class="row partners-images text-center">
+			            	<div class="col-md-4">
+			            		<img src="/media/bayadcenter.png" height="313" width="250" style="width:250px;" class="bayadcenterlogo">
+			            	</div>
+			            	<div class="col-md-4">
+			            		<img src="/media/bayadcenter2.png">
+			            	</div>
+			            	<div class="col-md-4">
+			            		<img src="/media/bayadcenter3.png">
+			            	</div>
+			            	<div class="col-md-12">
+			            		<img src="/media/resibo.png" style="width: fit-content;" class="resiboimg">
+			            	</div>
+			            </div>
 			        </div>
+
 			    </div>
+
 			</form>
+
         </div>
     </div>
 </section>
