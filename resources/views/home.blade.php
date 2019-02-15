@@ -111,7 +111,7 @@
 	    		<div class="col-md-12 text-center">
 	    			<div class="row">
 	    				<div class="col-md-12">
-    						<h4 style="color:green;">Inclusive of Singlet, Race Bib with Timing Chip, Finisher’s Medal</h4>
+    						<h4 style="color:green;">Inclusive of Technical Shirt, Race Bib with Timing Chip, Finisher’s Medal</h4>
     						<p>
 								<i>Top 3 Finishers All Category (Men / Women) will receive cash prize and trophy</i>
 							</p>
