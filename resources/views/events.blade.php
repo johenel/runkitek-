@@ -120,7 +120,7 @@
 			            	<div class="col-md-12">
 			            		<h1>Bayad Center Authorized Partners</h1>
 			            		<p>BAYAD CENTER BRANCH LOCATOR</p>
-			            		<p>LINK: <a target="_blank" href="http://www.bayadcenter.com/branchdirectory" style="font-size: 24px;color:red;">http://www.bayadcenter.com/branchdirectory</a></p>
+			            		<p style="word-break: break-word;">LINK: <a target="_blank" href="http://www.bayadcenter.com/branchdirectory" style="font-size: 24px;color:red;">http://www.bayadcenter.com/branchdirectory</a></p>
 			            		<p>Biller Name: <b style="color:blue;">Pinoy Aspiring Runners Inc.</b></p>
 			            	</div>
 			            	<div class="col-md-4">
