@@ -653,6 +653,13 @@ footer {
   }
 }
 @media (max-width: 425px) {
+  .not-mobile-pdf {
+      display: none;
+  }
+  .mobile-pdf {
+      display: block !important;
+          text-align: center;
+  }
   .desc-btm {
     text-align: justify;
   }
