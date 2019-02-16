@@ -174,7 +174,21 @@
     		</button>
     	</div>
     	<div class="modal-body">
-    		<iframe id="fred" style="border:1px solid #666CCC;width: 100%;height: 500px;" title="PDF in an i-Frame" src="/downloadables/RUNKITEK-2019-FAQS.pdf" frameborder="1" scrolling="auto" ></iframe>
+    		<!-- <iframe id="fred" style="border:1px solid #666CCC;width: 100%;height: 500px;" title="PDF in an i-Frame" src="/downloadables/RUNKITEK-2019-FAQS.pdf" frameborder="1" scrolling="auto" ></iframe> -->
+			<object
+				data="/downloadables/RUNKITEK-2019-FAQS.pdf"
+				type="application/pdf"
+				width="100%"
+				height="500">
+					<iframe
+					src="/downloadables/RUNKITEK-2019-FAQS.pdf"
+					width="100%"
+					height="500"
+					style="border: none;" scrolling="auto"> 
+					<p>Your browser does not support PDFs.
+					<a href="/downloadables/RUNKITEK-2019-FAQS.pdf">Download the PDF</a></p>
+					</iframe>
+			</object>
     	</div>
     	<div class="modal-footer">
     		<a  href="/downloadables/RUNKITEK-2019-FAQS.pdf" download="RUNKITEK-2019-FAQS" class="btn btn-success">Download</a>
@@ -195,7 +209,21 @@
     		</button>
     	</div>
     	<div class="modal-body">
-    		<iframe id="fred" style="border:1px solid #666CCC;width: 100%;height: 500px;" title="PDF in an i-Frame" src="/downloadables/ACCIDENT-WAIVER-AND-RELEASE-OF-LIABILITY-FORM.pdf" frameborder="1" scrolling="auto" ></iframe>
+    		<!-- <iframe id="fred" style="border:1px solid #666CCC;width: 100%;height: 500px;" title="PDF in an i-Frame" src="/downloadables/ACCIDENT-WAIVER-AND-RELEASE-OF-LIABILITY-FORM.pdf" frameborder="1" scrolling="auto" ></iframe> -->
+    		<object
+				data="/downloadables/ACCIDENT-WAIVER-AND-RELEASE-OF-LIABILITY-FORM.pdf"
+				type="application/pdf"
+				width="100%"
+				height="500">
+					<iframe
+					src="/downloadables/ACCIDENT-WAIVER-AND-RELEASE-OF-LIABILITY-FORM.pdf"
+					width="100%"
+					height="500"
+					style="border: none;" scrolling="auto"> 
+					<p>Your browser does not support PDFs.
+					<a href="/downloadables/ACCIDENT-WAIVER-AND-RELEASE-OF-LIABILITY-FORM.pdf">Download the PDF</a></p>
+					</iframe>
+			</object>
     	</div>
     	<div class="modal-footer">
     		<a  href="/downloadables/ACCIDENT-WAIVER-AND-RELEASE-OF-LIABILITY-FORM.pdf" download="ACCIDENT-WAIVER-AND-RELEASE-OF-LIABILITY-FORM" class="btn btn-success">Download</a>
