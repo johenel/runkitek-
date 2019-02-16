@@ -117,6 +117,12 @@
     border: dashed 1px #ddd;">Join us as we aim to promote health and wellness campaigns and raise funds for the community service-related initiatives and projects of UAP’s outreach program, Bayanihang Arkitektura. Register now and see you all on the race day! #Runkitek2019</p>
 			            </div>
 			            <div class="row partners-images text-center">
+			            	<div class="col-md-12">
+			            		<h1>Bayad Center Authorized Partners</h1>
+			            		<p>BAYAD CENTER BRANCH LOCATOR</p>
+			            		<p>LINK: <a target="_blank" href="http://www.bayadcenter.com/branchdirectory" style="font-size: 24px;color:red;">http://www.bayadcenter.com/branchdirectory</a></p>
+			            		<p>Biller Name: <b style="color:blue;">Pinoy Aspiring Runners Inc.</b></p>
+			            	</div>
 			            	<div class="col-md-4">
 			            		<img src="/media/bayadcenter.png" height="313" width="250" style="width:250px;" class="bayadcenterlogo">
 			            	</div>
