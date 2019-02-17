@@ -15,13 +15,7 @@ class AdminController extends Controller
 {
     private function initialize()
     {
-    	if(count(Admins::all()) == 0) {
-    		$time = time();
-    		$admin = new Admins;
-    		$admin->username = 'runkitekadmin';
-    		$admin->password = Hash::make('runkite2019!');
-    		$admin->save();
-    	}
+    	
     }
 
     public function logout(Request $request)
