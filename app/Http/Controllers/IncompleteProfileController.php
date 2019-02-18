@@ -90,6 +90,6 @@ class IncompleteProfileController extends Controller
 
 		$request->session()->put('user', $user[0]);
 	
-		return redirect('/profile');
+		return redirect('/events');
 	}
 }
