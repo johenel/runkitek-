@@ -73,60 +73,110 @@
 						<td>{{$p->email}}</td>
 						<td>{{$p->details['contact_number']}}</td>
 						<td>
-							@if($p->transactions)
+							@if(count($p->transactions) > 0)
 								<span style="color:green">YES</span>
 							@else
 								<span style="color:orange">NO</span>
 							@endif
 						</td>
 						<td>
-							{{$p->transactions['id']}}
-						</td>
-						<td>
-							{{$p->transactions['reference_no']}}
-						</td>
-						<td>
-							@if($p->transactions['status'])
-								@if($p->transactions['status'] == 'P')
-									<span style="color:orange;font-weight: bold;">PENDING</span>
-								@else 
-									<span style="color:green;font-weight: bold;">PAID</span>
-								@endif
-							@endif
+							@foreach($p->transactions as $t)
+								<div class="t-item" style="height:35px;padding-top: 5px;padding-bottom: 5px;border-bottom: solid 1px #eee;">
+									{{$t->id}}
+								</div>
+							@endforeach
 							
 						</td>
 						<td>
-							{{$p->transactions['amount']}}
+							@foreach($p->transactions as $t)
+								<div class="t-item" style="height:35px;padding-top: 5px;padding-bottom: 5px;border-bottom: solid 1px #eee;">
+									{{$t->reference_no}}
+								</div>
+							@endforeach
+							
 						</td>
 						<td>
-							{{$p->transactions['payment_channel']}}
+							@foreach($p->transactions as $t)
+								<div class="t-item" style="height:35px;padding-top: 5px;padding-bottom: 5px;border-bottom: solid 1px #eee;">
+									@if($t->status == 'P')
+										<span style="color:orange;font-weight: bold;">PENDING</span>
+									@elseif($t->status == 'S') 
+										<span style="color:green;font-weight: bold;">PAID</span>
+									@else 
+										<span style="color:red;font-weight: bold;">INITIATED</span>
+									@endif
+								</div>
+							@endforeach
 						</td>
 						<td>
-							{{$p->transactions['delivery_type']}}
+							@foreach($p->transactions as $t)
+								<div class="t-item" style="height:35px;padding-top: 5px;padding-bottom: 5px;border-bottom: solid 1px #eee;">
+									{{$t->amount}}
+								</div>
+							@endforeach
+							
 						</td>
 						<td>
-							{{$p->transactions['category']}}
+							@foreach($p->transactions as $t)
+								<div class="t-item" style="height:35px;padding-top: 5px;padding-bottom: 5px;border-bottom: solid 1px #eee;">
+									{{$t->payment_channel}}
+								</div>
+							@endforeach
+							
 						</td>
 						<td>
-							{{$p->transactions['size']}}
+							@foreach($p->transactions as $t)
+								<div class="t-item" style="height:35px;padding-top: 5px;padding-bottom: 5px;border-bottom: solid 1px #eee;">
+									{{$t->delivery_type}}
+								</div>
+							@endforeach
+							
+						</td>
+						<td>
+							@foreach($p->transactions as $t)
+								<div class="t-item" style="height:35px;padding-top: 5px;padding-bottom: 5px;border-bottom: solid 1px #eee;">
+									{{$t->category}}
+								</div>
+							@endforeach
+							
+						</td>
+						<td>
+							@foreach($p->transactions as $t)
+								<div class="t-item" style="height:35px;padding-top: 5px;padding-bottom: 5px;border-bottom: solid 1px #eee;">
+									{{$t->size}}
+								</div>
+							@endforeach
+							
 						</td>
 						<td>
 							{{$p->details['delivery_region']}}
 						</td>
 						<td>
-							@if($p->transactions['delivery_type'] == 'DELIVERY')
-								{{$p->details['delivery_address']}}
-							@endif
+							@foreach($p->transactions as $t)
+								<div class="t-item" style="height:35px;padding-top: 5px;padding-bottom: 5px;border-bottom: solid 1px #eee;">
+									@if($t->delivery_type == 'DELIVERY')
+										{{$p->details['delivery_address']}}
+									@endif
+								</div>
+							@endforeach
 						</td>
 						<td>
-							@if($p->transactions['delivery_type'] != 'DELIVERY')
-								{{$p->transactions['pickup_location']}}
-							@endif
+							@foreach($p->transactions as $t)
+								<div class="t-item" style="height:35px;padding-top: 5px;padding-bottom: 5px;border-bottom: solid 1px #eee;">
+									@if($t->delivery_type != 'DELIVERY')
+										{{$t->pickup_location}}
+									@endif
+								</div>
+							@endforeach
+							
 						</td>
 						<td>
-							@if($p->transactions)
-								{{$p->transactions['created_at']}}
-							@endif
+							@foreach($p->transactions as $t)
+								<div class="t-item" style="height:35px;padding-top: 5px;padding-bottom: 5px;border-bottom: solid 1px #eee;">
+									{{$t->created_at}}
+								</div>
+							@endforeach
+							
 						</td>
 						<td>
 							{{$p->details['delivery_address']}}

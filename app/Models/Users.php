@@ -16,6 +16,6 @@ class Users extends Model
 
     public function transactions()
     {
-    	return $this->hasOne('App\Models\Transactions');
+    	return $this->hasMany('App\Models\Transactions');
     }
 }
